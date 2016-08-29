@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		134814821D66536300A1E77C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134814811D66536300A1E77C /* main.cpp */; };
+		1348148A1D6654B900A1E77C /* make_plots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134814881D6654B900A1E77C /* make_plots.cpp */; };
+		136626541D74BA0400ABFF7A /* match_emtf_to_reco.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 136626531D74BA0400ABFF7A /* match_emtf_to_reco.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		1348147E1D66536300A1E77C /* EMTF_Pattern_Matching */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EMTF_Pattern_Matching; sourceTree = BUILT_PRODUCTS_DIR; };
 		134814811D66536300A1E77C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		134814881D6654B900A1E77C /* make_plots.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = make_plots.cpp; sourceTree = "<group>"; };
+		134814891D6654B900A1E77C /* make_plots.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = make_plots.hpp; sourceTree = "<group>"; };
+		136626531D74BA0400ABFF7A /* match_emtf_to_reco.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = match_emtf_to_reco.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,10 @@
 		134814801D66536300A1E77C /* EMTF_Pattern_Matching */ = {
 			isa = PBXGroup;
 			children = (
+				136626531D74BA0400ABFF7A /* match_emtf_to_reco.cpp */,
 				134814811D66536300A1E77C /* main.cpp */,
+				134814881D6654B900A1E77C /* make_plots.cpp */,
+				134814891D6654B900A1E77C /* make_plots.hpp */,
 			);
 			path = EMTF_Pattern_Matching;
 			sourceTree = "<group>";
@@ -118,6 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136626541D74BA0400ABFF7A /* match_emtf_to_reco.cpp in Sources */,
+				1348148A1D6654B900A1E77C /* make_plots.cpp in Sources */,
 				134814821D66536300A1E77C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +249,7 @@
 				134814871D66536300A1E77C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
