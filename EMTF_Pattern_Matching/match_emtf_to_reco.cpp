@@ -361,7 +361,7 @@ void match_EMTF_to_RECO()
 	  dPhi *= sin(my_trkLct_globPhi[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoPhi[iReco]) /
 	    abs(sin(my_trkLct_globPhi[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoPhi[iReco]));
 	  dPhi *= my_recoCharge[iReco];
-      if(dPhi>0.3){cout<<"dPhi is greater than 0.3!";}
+      if(dPhi>0.3){cout<<"dPhi in event "<<event_num<<" is greater than 0.3!"<<endl;}
 	  float dEta = my_trkLct_eta[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoEta[iReco];
 	  h_seg_unm_dEta->Fill( std::fmin( std::fmax(dEta, dEta_bins[0]+0.01), dEta_bins[1]-0.01 ) );
 	  h_seg_unm_dPhi->Fill( std::fmin( std::fmax(dPhi, dPhi_bins[0]+0.01), dPhi_bins[1]-0.01 ) );
