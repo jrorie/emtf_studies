@@ -11,7 +11,9 @@
 void match_EMTF_to_RECO()
 {
   
-  TString file_name = "/Users/jrorie/Software_Projects/emtf_studies/EMTF_Pattern_Matching/EMTF_Pattern_Matching/EMTF_NTuple_274440_443_v3.root";
+  //TString file_name = "/Users/jrorie/Software_Projects/emtf_studies/EMTF_Pattern_Matching/EMTF_Pattern_Matching/EMTF_NTuple_274440_443_v3.root";
+  TString file_name = "/home/jtr6/emtf_studies/CMSSW_8_0_9/src/data/EMTF_NTuple_274440_443_v3.root";
+ 
   TString out_file_name = "match_EMTF_to_RECO.root";
   
   // open the file
