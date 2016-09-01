@@ -131,6 +131,7 @@ void match_EMTF_to_RECO()
   TH2D * h_trk_vs_RECO_pT = new TH2D("h_trk_vs_RECO_pT", "", 500, 0, 500, 500, 0, 500);
 
   uint event_num = 0;
+  int greaterthan3p5 =0;
   // Loop over all entries of the TTree or TChain.
   while (myReader.Next()) {
     event_num += 1;
@@ -361,7 +362,12 @@ void match_EMTF_to_RECO()
 	  dPhi *= sin(my_trkLct_globPhi[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoPhi[iReco]) /
 	    abs(sin(my_trkLct_globPhi[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoPhi[iReco]));
 	  dPhi *= my_recoCharge[iReco];
-      if(dPhi>0.3){cout<<"dPhi in event "<<event_num<<" is greater than 0.3!"<<endl;}
+      if(dPhi>0.3)
+        {
+            cout<<"dPhi in event "<<event_num<<" is greater than 0.3!"<<endl;
+            cout<<"chamber = "<<my_recoCscSeg_chamber[iReco*16 + iSeg]<<". "<<endl;
+            greaterthan3p5++;
+        }
 	  float dEta = my_trkLct_eta[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoEta[iReco];
 	  h_seg_unm_dEta->Fill( std::fmin( std::fmax(dEta, dEta_bins[0]+0.01), dEta_bins[1]-0.01 ) );
 	  h_seg_unm_dPhi->Fill( std::fmin( std::fmax(dPhi, dPhi_bins[0]+0.01), dPhi_bins[1]-0.01 ) );
