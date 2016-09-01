@@ -367,6 +367,7 @@ void match_EMTF_to_RECO()
         {
             cout<<"dPhi in event "<<event_num<<" is greater than 0.3, noRECO!"<<endl;
             //cout<<"chamber = "<<my_recoCscSeg_chamber[iReco*16 + iSeg]<<". "<<endl; //iSeg not defined here
+
             greaterthan3p5noRECO++;
         }
 	  float dEta = my_trkLct_eta[best_trkId*4 + trk_st_id_unm[iSt]] - my_recoEta[iReco];
@@ -389,6 +390,12 @@ void match_EMTF_to_RECO()
         {
             cout<<"dPhi in event "<<event_num<<" is greater than 0.3, noEMTF!"<<endl;
             //cout<<"chamber = "<<my_recoCscSeg_chamber[iReco*16 + iSeg]<<". "<<endl; //iSeg not defined here
+            
+            // Print out information about each LCT matched to the RECO muon
+            cout << "Station " << iSt+1 << " RECO LCT " << iID+1 << ": BX = " << my_lctBx[reco_st_id[iSt][iID]] << ", endcap = " <<  my_lctEndcap[reco_st_id[iSt][iID]]
+	          << ", sector = " << my_lctSector[reco_st_id[iSt][iID]] << ", cscId = " << my_lctCscId[reco_st_id[iSt][iID]]
+	          << ", strip = " << my_lctStrip[reco_st_id[iSt][iID]] << ", wire = " << my_lctWire[reco_st_id[iSt][iID]] << endl;
+            
             greaterthan3p5noEMTF++;
         }
 	    float dEta = my_lctEta[reco_st_id[iSt][iID]] - my_recoEta[iReco];
