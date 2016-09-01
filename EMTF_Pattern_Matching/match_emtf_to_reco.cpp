@@ -461,6 +461,8 @@ void match_EMTF_to_RECO()
   h_trk_mode_vs_reco_eta->Write();
 
   // Look up TCanvas, saveAs("name.png"), emacs shortcuts (select, copy-past, find-replace)
+  cout<<"greaterthan3p5noEMTF is "<<greaterthan3p5noEMTF<<"."<<endl;
+  cout<<"greaterthan3p5noRECO is "<<greaterthan3p5noRECO<<"."<<endl;
   
   out_file->Close();
   file->Close();
